@@ -1,5 +1,5 @@
 # Run App With Docker
-I prepared a docker image on Docker Hub. You can start app the image with docker-compose.
+You can start app image with docker-compose.
 
 <br>
 
@@ -18,7 +18,7 @@ I prepared a docker image on Docker Hub. You can start app the image with docker
 
 * Then run this command in same directory.
 
-        $ docker-compose up -d
+        $ docker-compose up
 
 <br>
 
@@ -34,11 +34,11 @@ I prepared a docker image on Docker Hub. You can start app the image with docker
 ## Start The Web App
 * Download Project:
 
-        $ git clone https://github.com/erensayar/Crud-Demo-With-ExpressJs-MongoDb.git
+        $ git clone https://github.com/erensayar/Crud-Web-App-NodeJs.git
 
 * Go to project directory:
 
-        $ cd Crud-Demo-With-ExpressJs-MongoDb
+        $ cd Crud-Web-App-NodeJs
 
 * Start The App:
 
