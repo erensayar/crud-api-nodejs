@@ -11,13 +11,18 @@
     "express",
     "rest",
     "api",
-    "mongodb"
+    "mongodb",
+    "jwt",
+    "authentication"
   ],
   "author": "Eren Sayar",
+  "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.8.10"
+    "mongoose": "^5.8.10",
+    "jsonwebtoken": "^8.5.1",
+    "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

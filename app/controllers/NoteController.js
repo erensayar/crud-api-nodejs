@@ -1,5 +1,4 @@
-const db = require("../models/DbConfig");
-const Note = db.note;
+const Note = require("../models/Note");
 
 // Get All Notes
 // <====================================================================================>
