@@ -12,6 +12,7 @@
     "rest",
     "api",
     "mongodb",
+    "mongoose",
     "jwt",
     "authentication"
   ],
