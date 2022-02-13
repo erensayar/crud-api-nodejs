@@ -1,0 +1,808 @@
+{
+	"info": {
+		"_postman_id": "e3ca2089-01b0-41ee-b039-5def221de8df",
+		"name": "NodeJs Crud Demo & MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/v1/notes/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "528"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"210-BlvE2WmaeQikZApO7Pnan5zC52s\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:09:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"title\": \"Work (Updated)\",\n        \"note\": \"Don't forget calls\",\n        \"createdAt\": \"2022-02-12T10:41:24.479Z\",\n        \"updatedAt\": \"2022-02-12T11:08:47.223Z\",\n        \"id\": \"62078ed4c3788c3546689f84\"\n    },\n    {\n        \"title\": \"Software Technic Notes\",\n        \"note\": \"Look what is spring native\",\n        \"createdAt\": \"2022-02-12T11:01:36.159Z\",\n        \"updatedAt\": \"2022-02-12T11:01:36.159Z\",\n        \"id\": \"62079390f12271382a696515\"\n    },\n    {\n        \"title\": \"Software Technic Notes\",\n        \"note\": \"Look what is spring native\",\n        \"createdAt\": \"2022-02-12T11:08:56.626Z\",\n        \"updatedAt\": \"2022-02-12T11:08:56.626Z\",\n        \"id\": \"62079548dba6bf39a79ec334\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Note By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/v1/notes/62078ed4c3788c3546689f84",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						"62078ed4c3788c3546689f84"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/62078ed4c3788c3546689f84",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"62078ed4c3788c3546689f84"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-HqfG09/s5Yl5ngSG6WEiXMqd7Vo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:09:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Work (Updated)\",\n    \"note\": \"Don't forget calls\",\n    \"createdAt\": \"2022-02-12T10:41:24.479Z\",\n    \"updatedAt\": \"2022-02-12T11:08:47.223Z\",\n    \"id\": \"62078ed4c3788c3546689f84\"\n}"
+				},
+				{
+					"name": "204",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/344",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"344"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:09:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create Note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Software Technic Notes\",\n    \"note\" : \"Look what is spring native\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/api/v1/notes/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Software Technic Notes\",\n    \"note\" : \"Look what is spring native\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "180"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b4-A+KWi9h/TR1aPc5SqexURarB9Ls\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:08:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Software Technic Notes\",\n    \"note\": \"Look what is spring native\",\n    \"createdAt\": \"2022-02-12T11:08:56.626Z\",\n    \"updatedAt\": \"2022-02-12T11:08:56.626Z\",\n    \"id\": \"62079548dba6bf39a79ec334\"\n}"
+				},
+				{
+					"name": "400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"\",\n    \"note\" : \"Look what is spring native\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-xY6GOtlMev4Mnwb2bWxogS6b6QU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:12:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Title can not be empty!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"title\": \"Work (Updated)\",\n        \"note\": \"Don't forget calls\",\n        \"createdAt\": \"2022-02-12T10:41:24.479Z\",\n        \"updatedAt\": \"2022-02-12T10:41:24.479Z\",\n        \"id\": \"62078ed4c3788c3546689f84\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/api/v1/notes",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"notes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"Work (Updated)\",\n        \"note\": \"Don't forget calls\",\n        \"createdAt\": \"2022-02-12T10:41:24.479Z\",\n        \"updatedAt\": \"2022-02-12T10:41:24.479Z\",\n        \"id\": \"62078ed4c3788c3546689f84\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-zbo4qHm0ufS908mrUZWogg4zsBc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:03:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Note was updated successfully.\"\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"Work (Updated)\",\n        \"note\": \"Don't forget calls\",\n        \"createdAt\": \"2022-02-12T10:41:24.479Z\",\n        \"updatedAt\": \"2022-02-12T10:41:24.479Z\",\n        \"id\": \"2323\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-k+rQEPQmICaGIHcCxYiT4HDgiGo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:07:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Cannot update Note with id=2323!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Note By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/v1/notes/620793b4f12271382a696518",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						"620793b4f12271382a696518"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/620793b4f12271382a696518",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"620793b4f12271382a696518"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-lxpFiynlHWuw22Eo7BvKe6kzxD0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:03:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Note was deleted successfully!\"\n}"
+				},
+				{
+					"name": "204",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/21",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"21"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:10:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Delete All Notes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/api/v1/notes/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/api/v1/notes/",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:8081"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-1nhci/7KreNkRQL5QwlyV94Nzpg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Feb 2022 11:12:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"3 Notes has been deleted successfully!\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "localhost:8080"
+		}
+	]
+}

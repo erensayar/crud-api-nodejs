@@ -1,0 +1,13 @@
+# JS
+**/node_modules/
+package-lock.json
+/.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/coverage
+/build
+
+### VS Code ###
+.vscode/

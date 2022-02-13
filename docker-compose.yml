@@ -1,0 +1,28 @@
+version: "3.1"
+
+services:
+
+  mongo:
+    container_name: mongo-db
+    image: mongo
+    ports:
+      - 127.0.0.1:27017:27017  
+  
+  mongo-express:
+    container_name: mongo-exp
+    image: mongo-express
+    ports:
+      - 127.0.0.1:8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: 'true'
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
+  
+  web-app:
+    container_name: crud-web-app-nodejs
+    build: .
+    links:
+      - mongo-express
+    ports:
+      - 127.0.0.1:8080:8080
+
