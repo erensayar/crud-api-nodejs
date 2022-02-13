@@ -1,4 +1,4 @@
-# Run App With Docker
+# Start The Web App With Docker
 You can start app image with docker-compose.
 
 <br>
@@ -23,7 +23,7 @@ You can start app image with docker-compose.
 <br>
 
 
-# Run App Without Docker
+# Start The Web App Without Docker
 
 ## Requirements 
 
