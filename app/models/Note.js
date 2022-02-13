@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema(
+const noteSchema = new mongoose.Schema(
   {
     title: String,
     note: String
@@ -8,10 +8,10 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-userSchema.method("toJSON", function () {
+noteSchema.method("toJSON", function () {
   const { __v, _id, ...object } = this.toObject();
   object.id = _id;
   return object;
 });
 
-module.exports = mongoose.model("note", userSchema);
+module.exports = mongoose.model("note", noteSchema);

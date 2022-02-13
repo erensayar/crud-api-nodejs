@@ -1,24 +1,14 @@
 module.exports = app => {
   const noteController = require("../controllers/NoteController");
   var router = require("express").Router();
+  const auth = require("../middleware/Auth");
 
-  // Create a new Note
-  router.post("/", noteController.create);
-
-  // Get all Notes
-  router.get("/", noteController.findAll);
-
-  // Get Note with id
-  router.get("/:id", noteController.findOne);
-
-  // Update a Note with id
-  router.put("/", noteController.update);
-
-  // Delete a Note with id
-  router.delete("/:id", noteController.delete);
-
-  // Delete All Notes
-  router.delete("/", noteController.deleteAll);
+  router.post("/", auth, noteController.create);
+  router.get("/", auth, noteController.findAll);
+  router.get("/:id", auth, noteController.findOne);
+  router.put("/", auth, noteController.update);
+  router.delete("/:id", auth, noteController.delete);
+  router.delete("/", auth, noteController.deleteAll);
 
   app.use("/api/v1/notes", router);
 };
