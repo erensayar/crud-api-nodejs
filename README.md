@@ -12,11 +12,15 @@ You can start app image with docker-compose.
 <br>
 
 ## Start The Dockerized App With Docker Compose
-* Download the docker-compose.yml
- 
-  * You can find the file from github page(right here).
+* Download Project:
 
-* Then run this command in same directory.
+      $ git clone https://github.com/erensayar/Crud-Web-App-NodeJs.git
+
+* Go to project directory:
+
+        $ cd Crud-Web-App-NodeJs
+
+* Then run this command in project directory.
 
         $ docker-compose up
 
@@ -35,7 +39,8 @@ You can start app image with docker-compose.
 
 
 * Run The Mongo DB
-  * First of all you need start Mongo DB Server & Mongoose to run the web app. I prepared a compose file. You can find in dev-doc directory (./dev-doc/mongo&mongoose-compose-file/docker-compose.yml). 
+  * First of all you need start Mongo DB Server & Mongoose to run the web app. I prepared a compose file. You can find in dev-doc directory
+  (<b>./dev-doc/mongo&mongoose-compose-file/docker-compose.yml</b>). 
   
   * Go to compose directory.
         
