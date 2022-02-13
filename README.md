@@ -14,7 +14,7 @@ You can start app image with docker-compose.
 ## Start The Dockerized App With Docker Compose
 * Download the docker-compose.yml
  
-  * You can find the file from github page(right here) or docker hub page. 
+  * You can find the file from github page(right here).
 
 * Then run this command in same directory.
 
